@@ -2,7 +2,7 @@
 <link rel="stylesheet" href="diseño.css">
 <div class="background"style="background-image: url(https://documentacionaldia.com/wp-content/uploads/2021/02/Repuve-login-2.jpg);background-size: 100%;width: 100%;height: 100%;">
     <div>
-        <main class="login-form">
+        <form class="login-form">
             <div class="container" style="padding-top:2cm;">
                 <div class="row justify-content-center">
                     <div class="col-md-8">
@@ -11,12 +11,11 @@
                                 <font size=6> Login</font>
                             </div>
                             <div class="card-body">
-                                <form action="" method="">
+                                <form action="login.do" method="post">
                                     <div class="form-group row">
-                                        <label for="email_address" class="col-md-4 col-form-label text-md-right">E-Mail
-                                            Address</label>
+                                        <label for="user" class="col-md-4 col-form-label text-md-right">Nombre de Usuario</label>
                                         <div class="col-md-6">
-                                            <input type="text" id="email_address" class="form-control" name="email-address"
+                                            <input type="text" id="user" class="form-control" name="user"
                                                    required autofocus>
                                         </div>
                                     </div>
@@ -26,25 +25,11 @@
                                             <input type="password" id="password" class="form-control" name="password" required>
                                         </div>
                                     </div>
-
-                                    <div class="form-group row">
-                                        <div class="col-md-6 offset-md-4">
-                                            <div class="checkbox">
-                                                <label>
-                                                    <input type="checkbox" name="remember"> Recuerdame
-                                                </label>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-md-6 offset-md-4">
-                                        <button type="submit" class="btn btn-primary" action="login.do" method="post">
-
-                                            <a style="color: white;" href="welcome.do" class="subir">Log in</a>
+                                    <div class="col-md-6 offset-md-4"  style="padding-left: 2cm; padding-top: 0.3cm">
+                                        <button type="submit" class="btn btn-primary"  style="padding-right: 1cm;padding-left: 1cm;">
+                                            Login
                                         </button>
-                                        <a class="btn btn-link">
-                                            ¿No te has registrado?
-                                        </a>
+                                        <center><p> <font color="RED"> ${errorMessage}</font></p> </center>
                                     </div>
                                 </form>
                             </div>
@@ -52,6 +37,6 @@
                     </div>
                 </div>
             </div>
-        </main>
+        </form>
     </div>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
