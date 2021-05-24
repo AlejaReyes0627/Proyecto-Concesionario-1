@@ -1,9 +1,9 @@
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
 <link rel="stylesheet" href="diseño.css">
-<div class="background"style="background-image: url(https://documentacionaldia.com/wp-content/uploads/2021/02/Repuve-login-2.jpg);background-size: 100%;background-color: blue;width: 100%;height: 100%;">
+<div class="background"style="background-image: url(https://documentacionaldia.com/wp-content/uploads/2021/02/Repuve-login-2.jpg);background-size: 100%;width: 100%;height: 100%;">
     <div>
         <main class="login-form">
-            <div class="container" style="padding-top:2cm;box-shadow:5px 10px #212529">
+            <div class="container" style="padding-top:2cm;">
                 <div class="row justify-content-center">
                     <div class="col-md-8">
                         <div class="card border-secondary mb-3">
