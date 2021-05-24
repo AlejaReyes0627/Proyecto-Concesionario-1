@@ -28,8 +28,8 @@ public class Login implements Dto,Serializable
     public String insert()
     {
         String sql = "INSERT INTO registro(nombre_de_usuario,contrasena) VALUES ('"
-                + getNombre().trim()+"', '"
-                + getContrasena().trim()
+                + nombre+"', '"
+                + contrasena
                 + "');";
         System.out.println(sql);
         return sql;
