@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <module org.jetbrains.idea.maven.project.MavenProjectsManager.isMavenModule="true" type="JAVA_MODULE" version="4">
   <component name="EclipseModuleManager">
-    <libelement value="jar://$MODULE_DIR$/mysql-connector-java-5.1.16-bin.jar!/" />
+    <libelement value="jar://$MODULE_DIR$/mysql-connector-java-5.1.40-bin.jar!/" />
     <src_description expected_position="1">
       <src_folder value="file://$MODULE_DIR$/src" expected_position="1" />
     </src_description>
@@ -37,9 +37,9 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module-library">
-      <library name="mysql-connector-java-5.1.16-bin.jar">
+      <library name="mysql-connector-java-5.1.40-bin.jar">
         <CLASSES>
-          <root url="jar://$MODULE_DIR$/mysql-connector-java-5.1.16-bin.jar!/" />
+          <root url="jar://$MODULE_DIR$/mysql-connector-java-5.1.40-bin.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -56,5 +56,6 @@
     <orderEntry type="library" name="Maven: org.webjars:bootstrap:5.0.1" level="project" />
     <orderEntry type="library" name="Maven: org.webjars:popper.js:2.9.2" level="project" />
     <orderEntry type="library" name="Maven: org.webjars.bower:jquery:3.6.0" level="project" />
+    <orderEntry type="library" name="mysql:mysql-connector-java:5.1.40" level="project" />
   </component>
 </module>

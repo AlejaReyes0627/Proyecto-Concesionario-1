@@ -8,8 +8,9 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 @WebServlet(urlPatterns = "/login.do")
-public class loginServlet  extends HttpServlet
+public class LoginServlet extends HttpServlet
 {
+    LoginService loginService = new LoginService();
     private static final long serialVersionUID = 1L;
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException
@@ -22,12 +23,13 @@ public class loginServlet  extends HttpServlet
     {
         String user = request.getParameter("user");
         String password = request.getParameter("password");
-        LoginService loginService = new LoginService();
+
 
         if(loginService.isUserValid(user,password))
         {
             request.getSession().setAttribute("user",user);
             request.getSession().setAttribute("password",password);
+            response.sendRedirect("welcome.do");
             request.getRequestDispatcher("/WEB-INF/index.jsp").forward(request,response);
         }
         else
@@ -36,6 +38,6 @@ public class loginServlet  extends HttpServlet
             request.getRequestDispatcher("/WEB-INF/views/login.jsp").forward(request,response);
         }
     }
-    }
+}
 
 

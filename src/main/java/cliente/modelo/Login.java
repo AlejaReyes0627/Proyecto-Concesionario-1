@@ -28,8 +28,8 @@ public class Login implements Dto,Serializable
     public String insert()
     {
         String sql = "INSERT INTO registro(nombre_de_usuario,contrasena) VALUES ('"
-                + getNombre().trim()+"', '"
-                + getContrasena().trim()
+                + nombre+"', '"
+                + contrasena
                 + "');";
         System.out.println(sql);
         return sql;
@@ -37,8 +37,8 @@ public class Login implements Dto,Serializable
 
     public String findByPlaca()
     {
-        return "SELECT nombre_de_usuario,contrasena FROM registro WHERE nombre_De_usuario = '" + getNombre().trim() + "' AND contrasena = '" + getContrasena().trim() +"';" ;
-        //SELECT nombre_de_usuario,contrasena FROM registro WHERE nombre_de_usuario = 'si' AND contrasena='no';
+        return "SELECT nombre_de_usuario,contrasena FROM registro WHERE nombre_de_usuario = '" + nombre + "' AND contrasena ='" + contrasena +"';" ;
+              //SELECT nombre_de_usuario,contrasena FROM registro WHERE nombre_de_usuario = 'si' AND contrasena='no';
     }
 
 
