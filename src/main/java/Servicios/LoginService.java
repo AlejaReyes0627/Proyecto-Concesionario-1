@@ -2,12 +2,12 @@ package Servicios;
 
 import cliente.controller.Controller;
 
-public class loginService
+public class LoginService
 {
-    public boolean isUserValid( String password)
+    public boolean isUserValid(String user, String password)
     {
         Controller usuarioControlador = new Controller();
-        if(usuarioControlador.findByPassword(password)){
+        if(usuarioControlador.findByPassword(user,password)){
             return true;
         }
         return false;

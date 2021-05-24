@@ -37,7 +37,8 @@ public class Login implements Dto,Serializable
 
     public String findByPlaca()
     {
-        return "SELECT * FROM registro WHERE contrasena = '" + getContrasena().trim() + "';" ;
+        return "SELECT nombre_de_usuario,contrasena FROM registro WHERE nombre_De_usuario = '" + getNombre().trim() + "' AND contrasena = '" + getContrasena().trim() +"';" ;
+        //SELECT nombre_de_usuario,contrasena FROM registro WHERE nombre_de_usuario = 'si' AND contrasena='no';
     }
 
 

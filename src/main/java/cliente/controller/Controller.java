@@ -194,10 +194,10 @@ public class Controller
 		daoVehicle.insert(nuevo);
 	}
 
-	public boolean findByPassword(String password)
+	public boolean findByPassword(String user, String password)
 	{
 		DaoLogin daoVehicle = new DaoLogin();
-		Login nuevo = new Login(password);
+		Login nuevo = new Login(user, password);
 		daoVehicle.findByPlaca(nuevo);
 		if(daoVehicle.findByPlaca(nuevo)==null)
 		{

@@ -1,4 +1,4 @@
-import Servicios.loginService;
+import Servicios.LoginService;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -10,25 +10,25 @@ import java.io.IOException;
 @WebServlet(urlPatterns = "/login.do")
 public class loginServlet  extends HttpServlet
 {
+    private static final long serialVersionUID = 1L;
     @Override
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException
+    {
         request.getRequestDispatcher("/WEB-INF/login.jsp").forward(request, response);
-
     }
 
     @Override
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
-
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException
+    {
         String user = request.getParameter("user");
         String password = request.getParameter("password");
-        loginService loginService = new loginService();
-        if(loginService.isUserValid(password))
+        LoginService loginService = new LoginService();
+
+        if(loginService.isUserValid(user,password))
         {
             request.getSession().setAttribute("user",user);
-            response.sendRedirect("welcome.do");
-
+            request.getSession().setAttribute("password",password);
+            request.getRequestDispatcher("/WEB-INF/index.jsp").forward(request,response);
         }
         else
         {
