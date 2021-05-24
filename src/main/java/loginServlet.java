@@ -28,6 +28,7 @@ public class loginServlet  extends HttpServlet
         {
             request.getSession().setAttribute("user",user);
             request.getSession().setAttribute("password",password);
+            response.sendRedirect("welcome.do");
             request.getRequestDispatcher("/WEB-INF/index.jsp").forward(request,response);
         }
         else
@@ -36,6 +37,6 @@ public class loginServlet  extends HttpServlet
             request.getRequestDispatcher("/WEB-INF/views/login.jsp").forward(request,response);
         }
     }
-    }
+}
 
 

@@ -3,7 +3,7 @@ package servidor.data;
 import java.sql.*;
 
 /**
- * @authors Maria Alejandra Reyes Gonzalez, Maria José Villalba Lozano, Cesar David Salamanca Martinez
+ * @authors Maria Alejandra Reyes Gonzalez, Maria Jose Villalba Lozano
  *
  */
 
@@ -11,7 +11,7 @@ public class DataSource
 {
 	private Connection cnn;
 	private static DataSource dataSource = null;
-	private String url = "jdbc:mysql://localhost:3306/test";
+	private String url = "jdbc:mysql://localhost:3306/trabajo";
 	private String user = "root";
 	private String password = "";
 
