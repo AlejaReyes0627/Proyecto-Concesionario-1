@@ -4,10 +4,10 @@ import cliente.controller.Controller;
 
 public class loginService
 {
-    public boolean isUserValid(String user, String password)
+    public boolean isUserValid( String password)
     {
         Controller usuarioControlador = new Controller();
-        if(usuarioControlador.findByPlacaTradeMark (user)){
+        if(usuarioControlador.findByPassword(password)){
             return true;
         }
         return false;
