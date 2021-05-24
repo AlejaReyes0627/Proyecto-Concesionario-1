@@ -1,15 +1,7 @@
 package cliente.controller;
 
-import cliente.modelo.Defects;
-import cliente.modelo.Owners;
-import cliente.modelo.TradeMark;
-import cliente.modelo.TypeVehicle;
-import cliente.modelo.Vehicle;
-import cliente.modelo.dao.DaoDefects;
-import cliente.modelo.dao.DaoOwners;
-import cliente.modelo.dao.DaoTradeMark;
-import cliente.modelo.dao.DaoTypeVehicle;
-import cliente.modelo.dao.DaoVehicle;
+import cliente.modelo.*;
+import cliente.modelo.dao.*;
 
 public class Controller 
 {
@@ -190,6 +182,30 @@ public class Controller
 		DaoDefects daoVehicle = new DaoDefects();
 		Defects nuevo = new Defects(placa,orden,descripcion);
 		daoVehicle.update(nuevo);
+	}
+
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////	////////////////////////////////////////////////////////////////////////////
+
+	public void insertLogin(String userName, String contrasena)
+	{
+		DaoLogin daoVehicle = new DaoLogin();
+		Login nuevo = new Login(userName,contrasena);
+		daoVehicle.insert(nuevo);
+	}
+
+	public boolean findByPassword(String password)
+	{
+		DaoLogin daoVehicle = new DaoLogin();
+		Login nuevo = new Login(password);
+		daoVehicle.findByPlaca(nuevo);
+		if(daoVehicle.findByPlaca(nuevo)==null)
+		{
+			daoVehicle.read();
+			return false;
+		}
+		return true;
+
 	}
 
 
