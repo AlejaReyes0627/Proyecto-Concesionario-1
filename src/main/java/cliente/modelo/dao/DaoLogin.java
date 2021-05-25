@@ -38,7 +38,7 @@ public class DaoLogin extends AbstractDao<Login>
     @Override
     public Login findByPlaca(Dto data)
     {
-        //DataSource dataSource = DataSource.getInstance();
+        DataSource dataSource = DataSource.getInstance();
         ResultSet  resultSet  = dataSource.runQuery(data.findByPlaca());
         Login   person     = null;
         try {

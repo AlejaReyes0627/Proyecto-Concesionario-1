@@ -17,6 +17,14 @@
 </nav>
 <div class="background"style="background-image: url(https://documentacionaldia.com/wp-content/uploads/2021/02/Repuve-login-2.jpg);background-size: 100%;width: 100%;height: 100%;">
     <div>
+        <form class="login-form" method="post">
+            <div class="container" style="padding-top:2cm;">
+                <div class="row justify-content-center">
+                    <div class="col-md-8">
+                        <div class="card border-secondary mb-3">
+                            <div class="card-header alert alert-dark text-center"><i class="fas fa-user fa-2x"></i>
+                                <font size=6> Login</font>
+                            </div>
                             <div class="card-body">
                                 <form action="login.do" method="post">
                                     <div class="form-group row">
@@ -40,10 +48,10 @@
                                     </div>
                                 </form>
                             </div>
-
-
-
-
-
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
     </div>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>

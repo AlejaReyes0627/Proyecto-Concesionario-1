@@ -1,6 +1,6 @@
-import Servicios.LoginService;
-import servidor.data.DataSource;
+package com.example.ProyectoConcesionario;
 
+import Servicios.LoginService;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -26,12 +26,12 @@ public class LoginServlet extends HttpServlet
         String user = request.getParameter("user");
         String password = request.getParameter("password");
 
+
         if(loginService.isUserValid(user,password))
         {
             request.getSession().setAttribute("user",user);
             request.getSession().setAttribute("password",password);
             response.sendRedirect("welcome.do");
-            request.getRequestDispatcher("/WEB-INF/index.jsp").forward(request,response);
         }
         else
         {
