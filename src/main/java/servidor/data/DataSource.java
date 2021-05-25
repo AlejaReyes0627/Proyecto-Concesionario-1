@@ -25,36 +25,44 @@ public class DataSource
 		cnn = con;
 	}
 
-	 public DataSource() {
+	 public DataSource()
+	 {
 //	        Properties conProperties = new Properties();
 	        try {
 //	            conProperties.load(new FileInputStream("src/controller.data/connection.properties"));
 //	            String url = conProperties.getProperty("url");
 //	            String user = conProperties.getProperty("user");
 //	            String password = conProperties.getProperty("password");
-	            cnn = DriverManager.getConnection(url, user, password);
+				Class.forName("com.mysql.jdbc.Driver");
+				cnn = DriverManager.getConnection(url, user, password);
+
 
 	            System.out.println("Successful connection");
 
-	        } catch (Exception e) {
+	        } catch (Exception e)
+			{
 	            e.printStackTrace();
 	        }
 	    }
-	    public static DataSource getInstance(){
-	        if (dataSource == null){
+	    public static DataSource getInstance()
+		{
+	        if (dataSource == null)
+	        {
 	            dataSource = new DataSource();
 	        }
 	        return dataSource;
 	    }
 	    
 	    
-	    public ResultSet runQuery(String sql){
+	    public ResultSet runQuery(String sql)
+		{
 	        ResultSet resultSet = null;
 	        try {
 	            Statement statement = cnn.createStatement();
 	            resultSet = statement.executeQuery(sql);
 	            System.out.println("Successful query: "+sql);
-	        } catch (SQLException e) {
+	        } catch (SQLException e)
+			{
 	            System.out.println("Query error: "+e.getMessage());
 	        }
 	        return resultSet;
@@ -69,7 +77,8 @@ public class DataSource
 	            rows = statement.executeUpdate(sql);
 	            System.out.println("Successful query: "+sql);
 	            return true;
-	        } catch (SQLException e) {
+	        } catch (SQLException e)
+			{
 	            System.out.println("Query error: "+e.getMessage());
 	            return false;
 	        }

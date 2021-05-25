@@ -1,4 +1,6 @@
 import Servicios.LoginService;
+import servidor.data.DataSource;
+
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -23,7 +25,6 @@ public class LoginServlet extends HttpServlet
     {
         String user = request.getParameter("user");
         String password = request.getParameter("password");
-
 
         if(loginService.isUserValid(user,password))
         {

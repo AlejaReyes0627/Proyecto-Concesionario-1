@@ -25,28 +25,42 @@
 <div style="background-image: url(https://documentacionaldia.com/wp-content/uploads/2021/02/Repuve-login-2.jpg);background-size: 100%;width: 100%;height: 100%;">
     <div class="container" style="padding-left: 12cm; ">
         <div class="col-md-5">
-            <div class="form-area" style="background-color: #FAFAFA;padding: 10px 40px 60px;border: 1px solid GREY;">
+            <div class="form-area" style="background-color: #FAFAFA;border: 1px solid GREY;">
                 <form role="form">
                     <br style="clear:both">
-                    <h3 style="margin-bottom: 25px; text-align: center;">Contact Form</h3>
-                    <div class="form-group">
-                        <input type="text" class="form-control" id="name" name="name" placeholder="Name" required>
+                    <h3 style="margin-bottom: 25px;padding: 10px 20px 50px;text-align: center;">Notificar Defectos</h3>
+                    <div class="container">
+                        <div class="form-group">
+                            <input type="text" class="form-control" id="name" name="name" placeholder="Name" required>
+                        </div>
+                        <br>
+                        <div class="form-group">
+                            <input type="text" class="form-control" id="email" name="email" placeholder="Email" required>
+                        </div>
+                        <br>
+                        <button type="submit" class="btn btn-primary pull-right">Limpiar</button>
+                        <button type="submit" class="btn btn-primary pull-left">Agregar</button>
+                        <br>
                     </div>
-                    <div class="form-group">
-                        <input type="text" class="form-control" id="email" name="email" placeholder="Email" required>
-                    </div>
-                    <div class="form-group">
-                        <input type="text" class="form-control" id="mobile" name="mobile" placeholder="Mobile Number" required>
-                    </div>
-                    <div class="form-group">
-                        <input type="text" class="form-control" id="subject" name="subject" placeholder="Subject" required>
-                    </div>
-                    <div class="form-group">
-                        <textarea class="form-control" type="textarea" id="message" placeholder="Message" maxlength="140" rows="7"></textarea>
-                        <span class="help-block"><p id="characterLeft" class="help-block ">You have reached the limit</p></span>
+                    <div class="container">
+                        <div class="form-group">
+                            <input type="text" class="form-control" id="mobile" name="mobile" placeholder="Mobile Number" required>
+                        </div>
+                        <div>
+                            <button type="submit" class="btn btn-primary pull-right">Buscar</button>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" id="subject" name="subject" placeholder="Subject" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea class="form-control" type="textarea" id="message" placeholder="Message" maxlength="140" rows="7"></textarea>
+                            <span class="help-block"><p id="characterLeft" class="help-block ">You have reached the limit</p></span>
+                        </div>
                     </div>
 
-                    <button type="button" id="submit" name="submit" class="btn btn-primary pull-right">Submit Form</button>
+
+
+                    <button type="button" id="submit" name="submit" class="btn btn-primary pull-center">Submit Form</button>
                 </form>
             </div>
         </div>

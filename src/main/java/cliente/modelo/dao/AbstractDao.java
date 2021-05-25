@@ -6,8 +6,7 @@ import servidor.data.DataSource;
 
 public abstract class AbstractDao<T extends Dto>
 {
-
-	  private final DataSource dataSource;
+	  protected final DataSource dataSource;
 
 	    protected AbstractDao(DataSource dataSource) 
 	    {
@@ -31,6 +30,4 @@ public abstract class AbstractDao<T extends Dto>
 	    }
 
 	    public abstract T findByPlaca(Dto data);
-//////////////////////////////servidor :sockets del server, datasource,dto.
-	    ///////////////////////cliente: vista: controller, socket, dao.
 }
