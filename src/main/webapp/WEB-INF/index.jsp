@@ -23,21 +23,21 @@
   <div class="container">
     <h3 class="text-center">Propietarios</h3>
     <br>
-    <center><label>Cedula</label><input type="text" placeholer="cedula"></input> <button class="submit">buscar</button></center>    <div class="ready__started-box">
+    <center><label>Cedula</label><input type="text" placeholer="cedula" name="cedula" ></input> <button class="submit">buscar</button></center>    <div class="ready__started-box">
     <br>
       <form class="main__form">
         <div class="row">
           <div class="col-md-6">
             <div class="form-group">
               <label for="firstName">Nombre</label>
-              <input type="text" class="form-control" id="firstName" aria-describedby="firstName" placeholder="John" required>
+              <input type="text" class="form-control" id="firstName" name="nombre" placeholder="John" required>
               <br>
             </div>
           </div>
           <div class="col-md-6">
             <div class="form-group">
               <label for="lastName">Apellido</label>
-              <input type="text" class="form-control" id="lastName" aria-describedby="lastName" placeholder="Doe" required>
+              <input type="text" class="form-control" id="lastName" name="apellido" placeholder="Doe" required>
               <br>
             </div>
           </div>
@@ -46,14 +46,14 @@
           <div class="col-md-6">
             <div class="form-group">
               <label for="contactNumber">Celular</label>
-              <input type="email" class="form-control" id="contactNumber" aria-describedby="contactNumber" placeholder="xxx-xxxx-xxxxx" required>
+              <input type="email" class="form-control" id="contactNumber" name="telefono" placeholder="xxx-xxxx-xxxxx" required>
               <br>
             </div>
           </div>
           <div class="col-md-6">
             <div class="form-group">
               <label for="email">Email</label>
-              <input type="text" class="form-control" id="email" aria-describedby="email" placeholder="example@xyz.com" required>
+              <input type="text" class="form-control" id="email" name="email" placeholder="example@xyz.com" required>
               <br>
             </div>
           </div>
@@ -61,6 +61,7 @@
       </form>
     </div>
   </div>
+  <center> <button class="submit" action= "addOwner.do" method="post">Ingresar</button></center>
 </section>
 
 </nav>

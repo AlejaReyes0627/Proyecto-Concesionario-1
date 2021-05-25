@@ -9,7 +9,6 @@
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
                     <a class="nav-link active" aria-current="page" href="defectos.do">Notificar defectos</a>
-
                 </li>
             </Ul>
         </div>
@@ -37,7 +36,7 @@
                                     <div class="form-group row">
                                         <label for="password" class="col-md-4 col-form-label text-md-right">Password</label>
                                         <div class="col-md-6">
-                                            <input type="text" id="password" class="form-control" name="password" required>
+                                            <input type="password" id="password" class="form-control" name="password" required>
                                         </div>
                                     </div>
                                     <div class="col-md-6 offset-md-4"  style="padding-left: 2cm; padding-top: 0.3cm">
