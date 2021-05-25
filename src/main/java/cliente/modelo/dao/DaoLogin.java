@@ -11,28 +11,33 @@ import servidor.data.DataSource;
 public class DaoLogin extends AbstractDao<Login>
 {
 
-    public DaoLogin() {
+    public DaoLogin()
+    {
         super(DataSource.getInstance());
     }
 
     @Override
-    public List<Login> read() {
+    public List<Login> read()
+    {
         DataSource         dataSource = DataSource.getInstance();
         Login             data       = new Login();
         ResultSet          resultSet  = dataSource.runQuery(data.read());
         List<Login> personList = new List<>();
         try {
-            while (resultSet.next()) {
+            while (resultSet.next())
+            {
                 personList.add(getData(resultSet));
             }
-        } catch (SQLException throwables) {
+        } catch (SQLException throwables)
+        {
             throwables.printStackTrace();
         }
         return personList;
     }
 
     @Override
-    public Login findByPlaca(Dto data) {
+    public Login findByPlaca(Dto data)
+    {
         DataSource dataSource = DataSource.getInstance();
         ResultSet  resultSet  = dataSource.runQuery(data.findByPlaca());
         Login   person     = null;
