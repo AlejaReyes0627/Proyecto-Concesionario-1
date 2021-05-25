@@ -49,11 +49,12 @@ public class Controller
 
 	////////////////////////////////////////////////////////////////////////////	////////////////////////////////////////////////////////////////////////////	////////////////////////////////////////////////////////////////////////////
 
-	public void insertOwner(int cedula, String nombre, String apellido, Long telefono, String email) 
+	public boolean insertOwner(int cedula, String nombre, String apellido, Long telefono, String email)
 	{
 		DaoOwners daoVehicle = new DaoOwners();
 		Owners nuevo = new Owners(cedula,nombre,apellido,telefono,email);
 		daoVehicle.insert(nuevo);
+		return true;
 	}
 	public boolean findByPlacaOwner(int cedula)
 	{		
@@ -110,11 +111,6 @@ public class Controller
 		DaoTradeMark daoVehicle = new DaoTradeMark();
 		TradeMark nuevo = new TradeMark(nombre);
 		daoVehicle.delete(nuevo);
-	}
-	
-	public void updateTradeMark(int codigo, String nombre) 
-	{
-		
 	}
 
 
