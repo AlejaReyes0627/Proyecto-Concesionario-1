@@ -40,11 +40,27 @@ public class AddOwnerServlet extends HttpServlet
             long telefono = Long.parseLong(request.getParameter("telefono")) ;
             String email = request.getParameter("email");
 
-            OwnerService.addOwner(cedula, nombre, apellido, telefono, email);
+            boolean res =OwnerService.addOwner(cedula, nombre, apellido, telefono, email);
+
+            if(res)
+            {
+                request.getSession().setAttribute("cedula",cedula);
+                request.getSession().setAttribute("nombre",nombre);
+                request.getSession().setAttribute("apellido",apellido);
+                request.getSession().setAttribute("telefono",telefono);
+                request.getSession().setAttribute("email",email);
+                response.sendRedirect("addOwner.do");
+            }
+            else
+            {
+                request.setAttribute("errorMessage","Invalid Credentials!");
+
+            }
+
 
         } catch (Exception e)
         {
-            //Excepción de traducción de fecha
+            //Excepción de propietario
             e.printStackTrace();
         }
 
