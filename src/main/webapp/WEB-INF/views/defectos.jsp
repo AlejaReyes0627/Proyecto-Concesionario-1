@@ -57,9 +57,6 @@
                             <span class="help-block"><p id="characterLeft" class="help-block ">You have reached the limit</p></span>
                         </div>
                     </div>
-
-
-
                     <button type="button" id="submit" name="submit" class="btn btn-primary pull-center">Submit Form</button>
                 </form>
             </div>
