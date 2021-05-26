@@ -1,4 +1,5 @@
 package com.example.ProyectoConcesionario.OwnerServlet;
+import Servicios.OwnerService;
 import cliente.controller.Controller;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -12,6 +13,7 @@ public class AddOwnerServlet extends HttpServlet
 {
     private static final long serialVersionUID = 1L;
     private Controller ownerServices = new Controller();
+    private OwnerService ow = new OwnerService();
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException
     {
@@ -21,13 +23,14 @@ public class AddOwnerServlet extends HttpServlet
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException
     {
+
         int id = Integer.parseInt(request.getParameter("identification"));
         String name = request.getParameter("name");
         String metronome = request.getParameter("last_name");
         long l = Long.parseLong(request.getParameter("phone"));
         String email = request.getParameter("email");
 
-        if(ownerServices.insertOwner(id, name, metronome, l, email))
+        if(ow.addOwner(id, name, metronome, l, email))
         {
             request.setAttribute("identification",id);
             request.setAttribute("name",name);

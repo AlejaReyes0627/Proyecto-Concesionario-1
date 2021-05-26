@@ -52,7 +52,13 @@ public class Controller
 		DaoOwners daoVehicle = new DaoOwners();
 		Owners nuevo = new Owners(cedula,nombre,apellido,telefono,email);
 		daoVehicle.insert(nuevo);
-		return true;
+		if(daoVehicle.insert(nuevo))
+		{
+			return true;
+
+		}
+		daoVehicle.read();
+		return false;
 	}
 	public boolean findByPlacaOwner(int cedula)
 	{		
