@@ -17,13 +17,10 @@ public class VehicleService
         return false;
     }
 
-    public boolean addVehicle(String placa, String marca, int modelo, String color, String tipoVehiculo, double precio, int propietario)
+    public void addVehicle(String placa, String marca, int modelo, String color, String tipoVehiculo, double precio, int propietario)
     {
-        if(controlador.insertVehicle(placa,marca,modelo,color,tipoVehiculo,precio,propietario))
-        {
-            return true;
-        }
-        return false;
+        controlador.insertVehicle(placa,marca,modelo,color,tipoVehiculo,precio,propietario);
+
     }
 
     public void deleteVehicle(String placa)
