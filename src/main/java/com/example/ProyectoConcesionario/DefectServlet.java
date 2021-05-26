@@ -12,7 +12,7 @@ public class DefectServlet  extends HttpServlet
 {
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException
     {
-        request.getRequestDispatcher("/WEB-INF/defects.jsp").forward(request, response);
+        request.getRequestDispatcher("/WEB-INF/defectos.jsp").forward(request, response);
     }
 
 }
