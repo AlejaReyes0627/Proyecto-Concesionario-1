@@ -43,7 +43,6 @@
                                         <button type="submit" class="btn btn-primary"  style="padding-right: 1cm;padding-left: 1cm;">
                                             Login
                                         </button>
-                                        <center><p> <font color="RED"> ${errorMessage}</font></p> </center>
                                     </div>
                                 </form>
                             </div>

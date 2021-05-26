@@ -7,7 +7,6 @@ public class OwnerService
     static Controller controlador = new Controller();
     public boolean isOwnerValid(int cedula)
     {
-
         if(controlador.findByPlacaOwner(cedula))
         {
             return true;
@@ -17,12 +16,8 @@ public class OwnerService
 
     public static boolean addOwner(int cedula, String nombre, String apellido, long telefono, String email)
     {
-        if (controlador.insertOwner(cedula, nombre, apellido, telefono, email))
-        {
-            return true;
-        }
-        return false;
-
+        controlador.insertOwner(cedula,nombre,apellido,telefono,email);
+        return true;
     }
 
     public void deleteOwner(int cedula)

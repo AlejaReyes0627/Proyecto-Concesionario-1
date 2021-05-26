@@ -1,6 +1,5 @@
 <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
-<link rel="stylesheet" href="WEB-INF/diseno.css">
 <!DOCTYPE html>
 
 <nav class="navbar navbar-expand-lg navbar-light bg-light" >
@@ -13,116 +12,74 @@
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
           <a class="nav-link active" aria-current="page" href="defectos.do">Notificar defectos</a>
-
         </li>
         </Ul>
     </div>
   </div>
 </nav>
-<section class="ready_started project_form">
-  <div class="container">
-    <h3 class="text-center">Propietarios</h3>
-    <br>
-    <center><label>Cedula</label><input type="text" placeholer="cedula" name="cedula" ></input> <button class="submit">buscar</button></center>    <div class="ready__started-box">
-    <br>
-      <form class="main__form">
-        <div class="row">
-          <div class="col-md-6">
-            <div class="form-group">
-              <label for="firstName">Nombre</label>
-              <input type="text" class="form-control" id="firstName" name="nombre" placeholder="John" required>
-              <br>
-            </div>
-          </div>
-          <div class="col-md-6">
-            <div class="form-group">
-              <label for="lastName">Apellido</label>
-              <input type="text" class="form-control" id="lastName" name="apellido" placeholder="Doe" required>
-              <br>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-md-6">
-            <div class="form-group">
-              <label for="contactNumber">Celular</label>
-              <input type="email" class="form-control" id="contactNumber" name="telefono" placeholder="xxx-xxxx-xxxxx" required>
-              <br>
-            </div>
-          </div>
-          <div class="col-md-6">
-            <div class="form-group">
-              <label for="email">Email</label>
-              <input type="text" class="form-control" id="email" name="email" placeholder="example@xyz.com" required>
-              <br>
-            </div>
-          </div>
-        </div>
-      </form>
-    </div>
-  </div>
-  <center> <button class="submit" action= "addOwner.do" method="post">Ingresar</button></center>
-</section>
 
-</nav>
-<section class="ready_started project_form">
-  <div class="container">
-    <h3 class="text-center">Vehiculos</h3>
-    <br>
-    <center><label>Placa</label><input type="text" placeholer="cedula"></input> <button class="submit">buscar</button></center>
-    <div class="ready__started-box">
-    <br>
-    <div class="ready__started-box">
-      <form class="main__form">
-        <div class="row">
-          <div class="col-md-6">
-
-            <div class="form-group">
-              <label for="marca">Marca</label>
-              <input type="text" class="form-control" id="marca" aria-describedby="Marca" placeholder="" required>
-              <br>
-            </div>
-          </div>
-          <div class="col-md-6">
-            <div class="form-group">
-              <label for="modelo">Modelo</label>
-              <input type="text" class="form-control" id="modelo" aria-describedby="Modelo" placeholder="Doe" required>
-              <br>
+<div class="background"style="background-image: url(https://documentacionaldia.com/wp-content/uploads/2021/02/Repuve-login-2.jpg);background-size: 100%;width: 100%;height: 100%;">
+  <div>
+    <form class="login-form">
+      <div class="container" style="padding-top:2cm;">
+        <div class="row justify-content-center">
+          <div class="col-md-8">
+            <div class="card border-secondary mb-3">
+              <div class="card-header alert alert-dark text-center"><i class="fas fa-user fa-2x"></i>
+                <font size=6> Propietarios</font>
+              </div>
+              <div class="card-body">
+                <form action="addOwner.do" method="post">
+                  <div class="form-group row">
+                    <label class="col-md-4 col-form-label text-md-right">Cedula</label>
+                    <div class="col-md-6">
+                      <input type="number"  class="form-control" name="identification"
+                             required autofocus>
+                    </div>
+                  </div>
+                  <br>
+                  <div class="form-group row">
+                    <label class="col-md-4 col-form-label text-md-right">Nombre</label>
+                    <div class="col-md-6">
+                      <input type="text" class="form-control" name="name"
+                             required autofocus>
+                    </div>
+                  </div>
+                  <br>
+                  <div class="form-group row">
+                    <label class="col-md-4 col-form-label text-md-right">Apellido</label>
+                    <div class="col-md-6">
+                      <input type="text"  class="form-control" name="last_name"
+                             required autofocus>
+                    </div>
+                  </div>
+                  <br>
+                  <div class="form-group row">
+                    <label  class="col-md-4 col-form-label text-md-right">Telefono</label>
+                    <div class="col-md-6">
+                      <input type="number" class="form-control" name="phone"
+                             required autofocus>
+                    </div>
+                  </div>
+                  <br>
+                  <div class="form-group row">
+                    <label  class="col-md-4 col-form-label text-md-right">E-mail</label>
+                    <div class="col-md-6">
+                      <input type="text" class="form-control" name="email" required>
+                    </div>
+                  </div>
+                  <br>
+                  <div class="col-md-6 offset-md-4"  style="padding-left: 2cm; padding-top: 0.3cm">
+                    <button type="submit" class="btn btn-primary"  style="padding-right: 1cm;padding-left: 1cm;">
+                      Agregar propietario
+                    </button>
+                  </div>
+                </form>
+              </div>
             </div>
           </div>
         </div>
-        <div class="row">
-          <div class="col-md-6">
-            <div class="form-group">
-              <label for="coloxr">Color</label>
-              <input type="coloxr" class="form-control" id="coloxr" aria-describedby="coloxr" placeholder="xxx-xxxx-xxxxx" required>
-              <br>
-            </div>
-          </div>
-          <div class="col-md-6">
-            <div class="form-group">
-              <label for="tipovehiculo">Tipo de vehiculo</label>
-              <input type="text" class="form-control" id="tipoVehiculo" aria-describedby="tipoVehiculo" placeholder="example@xyz.com" required>
-              <br>
-            </div>
-          </div>
-          <div class="col-md-6">
-            <div class="form-group">
-              <label for="precio">Precio</label>
-              <input type="text" class="form-control" id="precio" aria-describedby="precio" placeholder="example@xyz.com" required>
-              <br>
-            </div>
-          </div>
-          <div class="col-md-6">
-            <div class="form-group">
-              <label for="propietario">Propietario</label>
-              <input type="text" class="form-control" id="propietario" aria-describedby="propietario" placeholder="example@xyz.com" required>
-              <br>
-            </div>
-          </div>
-        </div>
-      </form>
-    </div>
+      </div>
+    </form>
   </div>
-  </div>
-</section>
+</div>

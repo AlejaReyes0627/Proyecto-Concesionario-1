@@ -22,6 +22,8 @@
         </div>
     </div>
 </nav>
+
+
 <div style="background-image: url(https://documentacionaldia.com/wp-content/uploads/2021/02/Repuve-login-2.jpg);background-size: 100%;width: 100%;height: 100%;">
     <div class="container" style="padding-left: 12cm; ">
         <div class="col-md-5">
@@ -57,9 +59,6 @@
                             <span class="help-block"><p id="characterLeft" class="help-block ">You have reached the limit</p></span>
                         </div>
                     </div>
-
-
-
                     <button type="button" id="submit" name="submit" class="btn btn-primary pull-center">Submit Form</button>
                 </form>
             </div>

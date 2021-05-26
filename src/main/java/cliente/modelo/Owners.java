@@ -36,11 +36,11 @@ public class Owners implements Dto, Serializable
 	public String insert() 
 	{
 		String sql = "INSERT INTO propietarios(cedula, nombre, apellido, telefono, email) VALUES ("
-				+ getCedula() +", '"
-				+ getNombre().trim()+ "','"
-				+ getApellido().trim() + "','" 
-				+ getTelefono() + "','" 
-				+ getEmail().trim()
+				+ cedula+", '"
+				+ nombre+ "','"
+				+ apellido + "',"
+				+ telefono + ",'"
+				+ email
 				+ "');";
 		System.out.println(sql);
 		return sql;
