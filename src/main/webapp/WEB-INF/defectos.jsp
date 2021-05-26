@@ -33,33 +33,16 @@
                     <h3 style="margin-bottom: 25px;padding: 10px 20px 50px;text-align: center;">Notificar Defectos</h3>
                     <div class="container">
                         <div class="form-group">
-                            <input type="text" class="form-control" id="name" name="name" placeholder="Name" required>
+                            <input type="text" class="form-control" id="name" name="placa" placeholder="Placa" required>
                         </div>
                         <br>
                         <div class="form-group">
-                            <input type="text" class="form-control" id="email" name="email" placeholder="Email" required>
+                            <input type="text" class="form-control" id="email" name="descripcion" placeholder="Descripcion" required>
                         </div>
                         <br>
-                        <button type="submit" class="btn btn-primary pull-right">Limpiar</button>
                         <button type="submit" class="btn btn-primary pull-left">Agregar</button>
                         <br>
                     </div>
-                    <div class="container">
-                        <div class="form-group">
-                            <input type="text" class="form-control" id="mobile" name="mobile" placeholder="Mobile Number" required>
-                        </div>
-                        <div>
-                            <button type="submit" class="btn btn-primary pull-right">Buscar</button>
-                        </div>
-                        <div class="form-group">
-                            <input type="text" class="form-control" id="subject" name="subject" placeholder="Subject" required>
-                        </div>
-                        <div class="form-group">
-                            <textarea class="form-control" type="textarea" id="message" placeholder="Message" maxlength="140" rows="7"></textarea>
-                            <span class="help-block"><p id="characterLeft" class="help-block ">You have reached the limit</p></span>
-                        </div>
-                    </div>
-                    <button type="button" id="submit" name="submit" class="btn btn-primary pull-center">Submit Form</button>
                 </form>
             </div>
         </div>
