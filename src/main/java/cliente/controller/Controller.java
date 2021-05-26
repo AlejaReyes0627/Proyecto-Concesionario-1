@@ -22,7 +22,7 @@ public class Controller
 
 		if(daoVehicle.findByPlaca(nuevo)==null)
 		{
-			daoVehicle.read();
+			/*aoVehicle.read();*/
 			return false;
 		}
 		return true;
@@ -62,7 +62,7 @@ public class Controller
 
 		if(daoVehicle.findByPlaca(nuevo)==null)
 		{
-			daoVehicle.read();
+			/*daoVehicle.read();*/
 			return false;
 		}
 		return true;
@@ -134,7 +134,7 @@ public class Controller
 
 		if(daoVehicle.findByPlaca(nuevo)==null)
 		{
-			daoVehicle.read();
+			/*daoVehicle.read();*/
 			return false;
 		}
 		return true;
@@ -165,7 +165,7 @@ public class Controller
 		daoVehicle.findByPlaca(nuevo);
 		if(daoVehicle.findByPlaca(nuevo)==null)
 		{
-			daoVehicle.read();
+			/*daoVehicle.read();*/
 			return false;
 		}
 		return true;
@@ -205,7 +205,7 @@ public class Controller
 		daoVehicle.findByPlaca(nuevo);
 		if(daoVehicle.findByPlaca(nuevo)==null)
 		{
-			daoVehicle.read();
+			/*daoVehicle.read();*/
 			return false;
 		}
 		return true;

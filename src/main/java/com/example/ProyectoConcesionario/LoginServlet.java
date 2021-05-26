@@ -1,11 +1,14 @@
 package com.example.ProyectoConcesionario;
 import Servicios.LoginService;
+import cliente.controller.Controller;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.io.PrintWriter;
 
 @WebServlet(urlPatterns = "/login.do")
 public class LoginServlet extends HttpServlet
@@ -21,6 +24,7 @@ public class LoginServlet extends HttpServlet
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException
     {
+        PrintWriter out = response.getWriter();
         String user = request.getParameter("user");
         String password = request.getParameter("password");
 
@@ -33,8 +37,8 @@ public class LoginServlet extends HttpServlet
         }
         else
         {
+            loginService.addLogin(user,password);
             response.sendRedirect("login.do");
-            request.getRequestDispatcher("/WEB-INF/login.jsp").forward(request,response);
         }
     }
 }

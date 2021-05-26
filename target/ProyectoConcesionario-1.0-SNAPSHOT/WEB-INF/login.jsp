@@ -14,6 +14,7 @@
         </div>
     </div>
 </nav>
+
 <div class="background"style="background-image: url(https://documentacionaldia.com/wp-content/uploads/2021/02/Repuve-login-2.jpg);background-size: 100%;width: 100%;height: 100%;">
     <div>
         <form class="login-form" method="post">
@@ -43,6 +44,7 @@
                                         <button type="submit" class="btn btn-primary"  style="padding-right: 1cm;padding-left: 1cm;">
                                             Login
                                         </button>
+
                                     </div>
                                 </form>
                             </div>
