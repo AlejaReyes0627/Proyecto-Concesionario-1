@@ -16,7 +16,7 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="defects.do">Notificar defectos</a>
+                    <a class="nav-link active" aria-current="page" href="defectos.do">Notificar defectos</a>
                 </li>
             </Ul>
         </div>
@@ -28,28 +28,21 @@
     <div class="container" style="padding-left: 12cm; ">
         <div class="col-md-5">
             <div class="form-area" style="background-color: #FAFAFA;border: 1px solid GREY;">
-                <form role="form" action="defecto.do" method="post">
+                <form role="form">
                     <br style="clear:both">
                     <h3 style="margin-bottom: 25px;padding: 10px 20px 50px;text-align: center;">Notificar Defectos</h3>
                     <div class="container">
                         <div class="form-group">
-                            <input type="text" class="form-control" id="placa" name="placa" placeholder="Placa">
+                            <input type="text" class="form-control" id="name" name="placa" placeholder="Placa" required>
                         </div>
                         <br>
                         <div class="form-group">
-                            <textarea class="form-control" type="textarea" id="descripcion" name="descripcion" placeholder="descripcion" maxlength="140" rows="7"></textarea>
+                            <input type="text" class="form-control" id="email" name="descripcion" placeholder="Descripcion" required>
                         </div>
                         <br>
-                        <button type="submit" name="act" value="agregar" class="btn btn-primary pull-right">Agregar</button>
-                        <br>
-                        <button type="submit" name="act" value="buscar" class="btn btn-primary pull-left">Buscar</button>
-                        <br>
-                        <button type="submit" name="act" value="eliminar" class="btn btn-primary pull-right">Eliminar</button>
-                        <br>
-                        <button type="submit" name="act" value="actualizar" class="btn btn-primary pull-left">Actualizar</button>
+                        <button type="submit" class="btn btn-primary pull-left">Agregar</button>
                         <br>
                     </div>
-
                 </form>
             </div>
         </div>
