@@ -98,20 +98,19 @@
                                         <button type="submit" class="btn btn-primary pull-right"  name="act" value="agregar" style="padding-right: 1cm;padding-left: 1cm;">
                                             Agregar vehiculo
                                         </button>
-                                        <br>
 
-                                        <button type="submit" class="btn btn-primary pull-left"  name="act" value="buscar" style="padding-right: 1cm;padding-left: 1cm;">
+                                        <button type="submit" class="btn btn-primary"  name="act" value="buscar" style="padding-right: 1cm;padding-left: 1cm;">
                                             Buscar vehiculo
                                         </button>
-                                        <br>
+
                                         <button type="submit" class="btn btn-primary pull-right" name="act" value="eliminar" style="padding-right: 1cm;padding-left: 1cm;">
                                             Eliminar vehiculo
                                         </button>
-                                        <br>
+
                                         <button type="submit" class="btn btn-primary pull-left" name="act" value="actualizar" style="padding-right: 1cm;padding-left: 1cm;">
                                             Actualizar vehiculo
                                         </button>
-                                        <br>
+
                                     </div>
                                 </form>
                             </div>
