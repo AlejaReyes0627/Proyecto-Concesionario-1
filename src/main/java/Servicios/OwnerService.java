@@ -14,7 +14,7 @@ public class OwnerService
         return false;
     }
 
-    public static boolean addOwner(int cedula, String nombre, String apellido, long telefono, String email)
+    public boolean addOwner(int cedula, String nombre, String apellido, long telefono, String email)
     {
         controlador.insertOwner(cedula,nombre,apellido,telefono,email);
         return true;

@@ -21,6 +21,8 @@ public class AddOwnerServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+
+        PrintWriter out = response.getWriter();
         int id = Integer.parseInt(request.getParameter("identification"));
         String name = request.getParameter("name");
         String metronome = request.getParameter("last_name");
@@ -34,6 +36,7 @@ public class AddOwnerServlet extends HttpServlet {
             request.getSession().setAttribute("phone", l);
             request.getSession().setAttribute("email", email);
             response.sendRedirect("login.do");
+
         } else {
             System.out.println("NO FUNCIONOOOO");
         }

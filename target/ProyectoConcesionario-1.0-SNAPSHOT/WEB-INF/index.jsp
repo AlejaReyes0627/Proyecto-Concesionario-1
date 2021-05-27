@@ -11,7 +11,7 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="defectos.do">Notificar defectos</a>
+          <a class="nav-link active" aria-current="page" href="defects.do">Notificar defectos</a>
         </li>
         </Ul>
     </div>
@@ -33,7 +33,7 @@
                   <div class="form-group row">
                     <label class="col-md-4 col-form-label text-md-right">Cedula</label>
                     <div class="col-md-6">
-                      <input type="number"  class="form-control" name="identification"
+                      <input type="number"  id="identification" class="form-control" name="identification"
                              required autofocus>
                     </div>
                   </div>
@@ -41,7 +41,7 @@
                   <div class="form-group row">
                     <label class="col-md-4 col-form-label text-md-right">Nombre</label>
                     <div class="col-md-6">
-                      <input type="text" class="form-control" name="name"
+                      <input type="text" id="name" class="form-control" name="name"
                              required autofocus>
                     </div>
                   </div>
@@ -49,7 +49,7 @@
                   <div class="form-group row">
                     <label class="col-md-4 col-form-label text-md-right">Apellido</label>
                     <div class="col-md-6">
-                      <input type="text"  class="form-control" name="last_name"
+                      <input type="text"  id="last_name" class="form-control" name="last_name"
                              required autofocus>
                     </div>
                   </div>
@@ -57,7 +57,7 @@
                   <div class="form-group row">
                     <label  class="col-md-4 col-form-label text-md-right">Telefono</label>
                     <div class="col-md-6">
-                      <input type="number" class="form-control" name="phone"
+                      <input type="number" id="phone" class="form-control" name="phone"
                              required autofocus>
                     </div>
                   </div>
@@ -65,7 +65,7 @@
                   <div class="form-group row">
                     <label  class="col-md-4 col-form-label text-md-right">E-mail</label>
                     <div class="col-md-6">
-                      <input type="text" class="form-control" name="email" required>
+                      <input type="text" id="email" class="form-control" name="email" required>
                     </div>
                   </div>
                   <br>
