@@ -7,7 +7,7 @@ public class VehicleService
 {
 
     Controller controlador = new Controller();
-    public boolean isUserValid(String placa)
+    public boolean isVehicleValid(String placa)
     {
 
         if(controlador.findByPlacaVehicle(placa))
@@ -17,21 +17,21 @@ public class VehicleService
         return false;
     }
 
-    public void addVehicle(String placa, String marca, int modelo, String color, String tipoVehiculo, double precio, int propietario)
+    public boolean addVehicle(String placa, String marca, int modelo, String color, String tipoVehiculo, double precio, int propietario)
     {
         controlador.insertVehicle(placa,marca,modelo,color,tipoVehiculo,precio,propietario);
-
+        return true;
     }
 
-    public void deleteVehicle(String placa)
+    public boolean deleteVehicle(String placa)
     {
         controlador.deleteVehicle(placa);
-
+        return true;
     }
 
-    public void editVehicle(String placa, String marca, int modelo, String color, String tipoVehiculo, double precio, int propietario)
+    public boolean editVehicle(String placa, String marca, int modelo, String color, String tipoVehiculo, double precio, int propietario)
     {
         controlador.updateVehicle(placa,marca,modelo,color,tipoVehiculo,precio,propietario);
-
+        return true;
     }
 }

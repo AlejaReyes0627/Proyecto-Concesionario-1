@@ -29,16 +29,20 @@ public class AddOwnerServlet extends HttpServlet {
         long l = Long.parseLong(request.getParameter("phone"));
         String email = request.getParameter("email");
 
-        if (ownerServices.addOwner(id, name, metronome, l, email)) {
+        if (ownerServices.isOwnerValid(id))
+        {
+            request.getSession().setAttribute("identification", id);
+            response.sendRedirect("login.do");
+        }
+        else
+        {
+            ownerServices.addOwner(id, name, metronome, l, email);
             request.getSession().setAttribute("identification", id);
             request.getSession().setAttribute("name", name);
             request.getSession().setAttribute("last_name", metronome);
             request.getSession().setAttribute("phone", l);
             request.getSession().setAttribute("email", email);
-            response.sendRedirect("login.do");
-
-        } else {
-            System.out.println("NO FUNCIONOOOO");
+            response.sendRedirect("addOwner.do");
         }
     }
 }

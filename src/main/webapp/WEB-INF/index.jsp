@@ -20,7 +20,7 @@
 
 <div class="background"style="background-image: url(https://documentacionaldia.com/wp-content/uploads/2021/02/Repuve-login-2.jpg);background-size: 100%;width: 100%;height: 100%;">
   <div>
-    <form class="login-form"  method="post">
+    <form class="login-form"  action="addOwner.do" method="post">
       <div class="container" style="padding-top:2cm;">
         <div class="row justify-content-center">
           <div class="col-md-8">
@@ -29,7 +29,7 @@
                 <font size=6> Propietarios</font>
               </div>
               <div class="card-body">
-                <form action="addOwner.do" method="post">
+                <form >
                   <div class="form-group row">
                     <label class="col-md-4 col-form-label text-md-right">Cedula</label>
                     <div class="col-md-6">

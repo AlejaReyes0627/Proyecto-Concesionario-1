@@ -16,6 +16,7 @@ public class DefectServlet  extends HttpServlet
 {
     DefectsService defectsService = new DefectsService();
 
+    @Override
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException
     {
         request.getRequestDispatcher("/WEB-INF/defectos.jsp").forward(request, response);
@@ -27,6 +28,7 @@ public class DefectServlet  extends HttpServlet
         PrintWriter out = response.getWriter();
         String name = request.getParameter("name");
         String email = request.getParameter("email");
+
 
         if(defectsService.isPlacaValid(name))
         {

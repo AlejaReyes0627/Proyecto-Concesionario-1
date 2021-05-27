@@ -10,6 +10,10 @@
                 <li class="nav-item">
                     <a class="nav-link active" aria-current="page" href="defects.do">Notificar defectos</a>
                 </li>
+
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="addVehicle.do">Vehiculos</a>
+                </li>
             </Ul>
         </div>
     </div>
