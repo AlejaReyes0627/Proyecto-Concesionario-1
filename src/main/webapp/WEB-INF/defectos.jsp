@@ -33,7 +33,7 @@
                     <h3 style="margin-bottom: 25px;padding: 10px 20px 50px;text-align: center;">Notificar Defectos</h3>
                     <div class="container">
                         <div class="form-group">
-                            <input type="text" class="form-control" id="placa" name="placa" placeholder="Placa" required>
+                            <input type="text" class="form-control" id="placa" name="placa" placeholder="Placa">
                         </div>
                         <br>
                         <div class="form-group">
@@ -41,8 +41,11 @@
                         </div>
                         <br>
                         <button type="submit" name="act" value="agregar" class="btn btn-primary pull-right">Agregar</button>
+                        <br>
                         <button type="submit" name="act" value="buscar" class="btn btn-primary pull-left">Buscar</button>
+                        <br>
                         <button type="submit" name="act" value="eliminar" class="btn btn-primary pull-right">Eliminar</button>
+                        <br>
                         <button type="submit" name="act" value="actualizar" class="btn btn-primary pull-left">Actualizar</button>
                         <br>
                     </div>

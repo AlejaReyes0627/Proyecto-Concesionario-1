@@ -5,7 +5,7 @@
 
 <nav class="navbar navbar-expand-lg navbar-light bg-light" >
   <div class="container-fluid">
-    <a class="navbar-brand" href="#"><font color="red"><b>Concesionario De Autos</b></font></a>
+    <a class="navbar-brand" href="#"><font color="black"><b>Concesionario De Autos</b></font></a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -14,7 +14,11 @@
         <li class="nav-item">
           <a class="nav-link active" aria-current="page" href="defecto.do">Notificar defectos</a>
         </li>
-        </Ul>
+
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="addVehicle.do">Vehiculos</a>
+        </li>
+      </Ul>
     </div>
   </div>
 </nav>
@@ -38,7 +42,7 @@
                     <label class="col-md-4 col-form-label text-md-right">Cedula</label>
                     <div class="col-md-6">
                       <input type="number"  id="identification" class="form-control" name="identification"
-                             required autofocus>
+                             autofocus>
                     </div>
                   </div>
                   <br>
@@ -46,7 +50,7 @@
                     <label class="col-md-4 col-form-label text-md-right">Nombre</label>
                     <div class="col-md-6">
                       <input type="text" id="name" class="form-control" name="name"
-                             required autofocus>
+                             autofocus>
                     </div>
                   </div>
                   <br>
@@ -54,7 +58,7 @@
                     <label class="col-md-4 col-form-label text-md-right">Apellido</label>
                     <div class="col-md-6">
                       <input type="text"  id="last_name" class="form-control" name="last_name"
-                             required autofocus>
+                             autofocus>
                     </div>
                   </div>
                   <br>
@@ -62,7 +66,7 @@
                     <label  class="col-md-4 col-form-label text-md-right">Telefono</label>
                     <div class="col-md-6">
                       <input type="number" id="phone" class="form-control" name="phone"
-                             required autofocus>
+                              autofocus>
                     </div>
                   </div>
                   <br>
@@ -77,14 +81,17 @@
                     <button type="submit" class="btn btn-primary" name="act" value="agregar"  style="padding-right: 1cm;padding-left: 1cm;">
                       Agregar propietario
                     </button>
+                    <br>
 
                     <button type="submit" class="btn btn-primary" name="act" value="buscar"  style="padding-right: 1cm;padding-left: 1cm;">
                       Buscar propietario
                     </button>
+                    <br>
 
                     <button type="submit" class="btn btn-primary" name="act" value="eliminar"  style="padding-right: 1cm;padding-left: 1cm;">
                       Eliminar propietario
                     </button>
+                    <br>
 
                     <button type="submit" class="btn btn-primary" name="act" value="actualizar"  style="padding-right: 1cm;padding-left: 1cm;">
                       Actualizar propietario
