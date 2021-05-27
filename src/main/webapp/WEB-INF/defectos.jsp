@@ -28,20 +28,22 @@
     <div class="container" style="padding-left: 12cm; ">
         <div class="col-md-5">
             <div class="form-area" style="background-color: #FAFAFA;border: 1px solid GREY;">
-                <form role="form" action="defects.do" method="post">
+                <form role="form" action="defecto.do" method="post">
                     <br style="clear:both">
                     <h3 style="margin-bottom: 25px;padding: 10px 20px 50px;text-align: center;">Notificar Defectos</h3>
                     <div class="container">
                         <div class="form-group">
-                            <input type="text" class="form-control" id="name" name="name" placeholder="Name" required>
+                            <input type="text" class="form-control" id="placa" name="placa" placeholder="Placa" required>
                         </div>
                         <br>
                         <div class="form-group">
-                            <textarea class="form-control" type="textarea" id="email" name="email" placeholder="email" maxlength="140" rows="7"></textarea>
+                            <textarea class="form-control" type="textarea" id="descripcion" name="descripcion" placeholder="descripcion" maxlength="140" rows="7"></textarea>
                         </div>
                         <br>
-                        <button type="submit" class="btn btn-primary pull-right">Limpiar</button>
-                        <button type="submit" class="btn btn-primary pull-left">Agregar</button>
+                        <button type="submit" name="act" value="agregar" class="btn btn-primary pull-right">Agregar</button>
+                        <button type="submit" name="act" value="buscar" class="btn btn-primary pull-left">Buscar</button>
+                        <button type="submit" name="act" value="eliminar" class="btn btn-primary pull-right">Eliminar</button>
+                        <button type="submit" name="act" value="actualizar" class="btn btn-primary pull-left">Actualizar</button>
                         <br>
                     </div>
 

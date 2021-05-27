@@ -1,4 +1,4 @@
-package com.example.ProyectoConcesionario.VehicleServlet;
+package com.example.ProyectoConcesionario;
 
 import Servicios.VehicleService;
 
@@ -25,7 +25,7 @@ public class addVehicleServlet extends HttpServlet
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-        PrintWriter out = response.getWriter();
+        String act = request.getParameter("act");
         String placa = request.getParameter("placa");
         String marca = request.getParameter("marca");
         int modelo = Integer.parseInt(request.getParameter("modelo"));
@@ -34,18 +34,33 @@ public class addVehicleServlet extends HttpServlet
         double precio = Double.parseDouble(request.getParameter("precio"));
         int propietario = Integer.parseInt(request.getParameter("propietario"));
 
-        if (vehicleService.isVehicleValid(placa))
+        if (act.equals("buscar"))
         {
+            vehicleService.isVehicleValid(placa);
             request.getSession().setAttribute("placa", placa);
-
-            response.sendRedirect("login.do");
-
+            response.sendRedirect("addVehicle.do");
         }
-
-
-        else
+        else if(act.equals("agregar"))
         {
             vehicleService.addVehicle(placa, marca, modelo, color,tipoVehiculo,precio, propietario);
+            request.getSession().setAttribute("placa", placa);
+            request.getSession().setAttribute("marca", marca);
+            request.getSession().setAttribute("modelo", modelo);
+            request.getSession().setAttribute("color", color);
+            request.getSession().setAttribute("tipoVehiculo", tipoVehiculo);
+            request.getSession().setAttribute("precio", precio);
+            request.getSession().setAttribute("propietario", propietario);
+            response.sendRedirect("addVehicle.do");
+        }
+        else if(act.equals("eliminar"))
+        {
+            vehicleService.deleteVehicle(placa);
+            request.getSession().setAttribute("placa", placa);
+            response.sendRedirect("addVehicle.do");
+        }
+        else if(act.equals("actualizar"))
+        {
+            vehicleService.editVehicle(placa, marca, modelo, color,tipoVehiculo,precio, propietario);
             request.getSession().setAttribute("placa", placa);
             request.getSession().setAttribute("marca", marca);
             request.getSession().setAttribute("modelo", modelo);

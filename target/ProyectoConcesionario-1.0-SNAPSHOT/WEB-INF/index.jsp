@@ -1,3 +1,4 @@
+<%@ page import="java.util.Date" %>
 <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
 <!DOCTYPE html>
@@ -11,7 +12,7 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="defects.do">Notificar defectos</a>
+          <a class="nav-link active" aria-current="page" href="defecto.do">Notificar defectos</a>
         </li>
         </Ul>
     </div>
@@ -20,6 +21,9 @@
 
 <div class="background"style="background-image: url(https://documentacionaldia.com/wp-content/uploads/2021/02/Repuve-login-2.jpg);background-size: 100%;width: 100%;height: 100%;">
   <div>
+
+
+
     <form class="login-form"  action="addOwner.do" method="post">
       <div class="container" style="padding-top:2cm;">
         <div class="row justify-content-center">
@@ -70,8 +74,20 @@
                   </div>
                   <br>
                   <div class="col-md-6 offset-md-4"  style="padding-left: 2cm; padding-top: 0.3cm">
-                    <button type="submit" class="btn btn-primary"  style="padding-right: 1cm;padding-left: 1cm;">
+                    <button type="submit" class="btn btn-primary" name="act" value="agregar"  style="padding-right: 1cm;padding-left: 1cm;">
                       Agregar propietario
+                    </button>
+                    
+                    <button type="submit" class="btn btn-primary" name="act" value="buscar"  style="padding-right: 1cm;padding-left: 1cm;">
+                      Buscar propietario
+                    </button>
+
+                    <button type="submit" class="btn btn-primary" name="act" value="eliminar"  style="padding-right: 1cm;padding-left: 1cm;">
+                      Eliminar propietario
+                    </button>
+
+                    <button type="submit" class="btn btn-primary" name="act" value="actualizar"  style="padding-right: 1cm;padding-left: 1cm;">
+                      Actualizar propietario
                     </button>
                   </div>
                 </form>

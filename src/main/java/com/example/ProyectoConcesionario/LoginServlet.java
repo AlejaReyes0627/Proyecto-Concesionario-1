@@ -24,18 +24,19 @@ public class LoginServlet extends HttpServlet
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException
     {
-        PrintWriter out = response.getWriter();
+        String act = request.getParameter("act");
         String user = request.getParameter("user");
         String password = request.getParameter("password");
 
 
-        if(loginService.isUserValid(user,password))
+        if( act.equals("buscar"))
         {
+            loginService.isUserValid(user,password);
             request.getSession().setAttribute("user",user);
             request.getSession().setAttribute("password",password);
             response.sendRedirect("welcome.do");
         }
-        else
+        else if(act.equals("agregar"))
         {
             loginService.addLogin(user,password);
             response.sendRedirect("login.do");

@@ -11,36 +11,56 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
 
-@WebServlet(urlPatterns = "/defects.do")
-public class DefectServlet  extends HttpServlet
+@WebServlet(urlPatterns = "/defecto.do")
+public class DefectServlet extends HttpServlet
 {
     DefectsService defectsService = new DefectsService();
-
+    private static final long serialVersionUID = 1L;
     @Override
-    public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException
     {
         request.getRequestDispatcher("/WEB-INF/defectos.jsp").forward(request, response);
     }
-
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException
     {
-        PrintWriter out = response.getWriter();
-        String name = request.getParameter("name");
-        String email = request.getParameter("email");
+        String act = request.getParameter("act");
+        String placa = request.getParameter("placa");
+        String descripcion = request.getParameter("descripcion");
+        long l = Long.parseLong(request.getParameter("orden"));
 
 
-        if(defectsService.isPlacaValid(name))
+        if(act.equals("buscar"))
         {
-            request.getSession().setAttribute("name", name);
-            request.getSession().setAttribute("email", email);
-            response.sendRedirect("welcome.do");
+            defectsService.isPlacaValid(placa);
+            request.getSession().setAttribute("placa",placa);
+            response.sendRedirect("defecto.do");
         }
-        else
+        else if(act.equals("agregar"))
         {
-           defectsService.addDefect(name, email);
-            response.sendRedirect("login.do");
-        }
+            defectsService.addDefect(placa,descripcion);
+            request.getSession().setAttribute("placa",placa);
+            request.getSession().setAttribute("descripcion",descripcion);
 
+            response.sendRedirect("defecto.do");
+        }
+        else if(act.equals("eliminar"))
+        {
+            defectsService.deleteDefect(placa);
+            request.getSession().setAttribute("placa",placa);
+            response.sendRedirect("defecto.do");
+        }
+        else if(act.equals("actualizar"))
+        {
+            defectsService.updateDefect(placa,l,descripcion);
+            request.getSession().setAttribute("placa",placa);
+            request.getSession().setAttribute("phone", l);
+            request.getSession().setAttribute("descripcion",descripcion);
+            response.sendRedirect("defecto.do");
+
+        }
     }
+
+
+
 }

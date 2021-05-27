@@ -8,7 +8,7 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="defects.do">Notificar defectos</a>
+                    <a class="nav-link active" aria-current="page" href="defecto.do">Notificar defectos</a>
                 </li>
 
                 <li class="nav-item">
@@ -45,10 +45,12 @@
                                         </div>
                                     </div>
                                     <div class="col-md-6 offset-md-4"  style="padding-left: 2cm; padding-top: 0.3cm">
-                                        <button type="submit" class="btn btn-primary"  style="padding-right: 1cm;padding-left: 1cm;">
+                                        <button type="submit" class="btn btn-primary" name="act" value="buscar" style="padding-right: 1cm;padding-left: 1cm;">
                                             Login
                                         </button>
-
+                                        <button type="submit" name="act" value="agregar" class="btn btn-primary"  style="padding-right: 1cm;padding-left: 1cm;">
+                                            Rgistrar
+                                        </button>
                                     </div>
                                 </form>
                             </div>
