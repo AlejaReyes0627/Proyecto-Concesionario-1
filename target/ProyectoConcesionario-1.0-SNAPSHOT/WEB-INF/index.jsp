@@ -73,27 +73,24 @@
                   <div class="form-group row">
                     <label  class="col-md-4 col-form-label text-md-right">E-mail</label>
                     <div class="col-md-6">
-                      <input type="text" id="email" class="form-control" name="email" required>
+                      <input type="text" id="email" class="form-control" name="email">
                     </div>
                   </div>
                   <br>
-                  <div class="col-md-6 offset-md-4"  style="padding-left: 2cm; padding-top: 0.3cm">
+                  <div class="btn-group" style="padding-right: 1cm">
                     <button type="submit" class="btn btn-primary" name="act" value="agregar"  style="padding-right: 1cm;padding-left: 1cm;">
                       Agregar propietario
                     </button>
                     <br>
-
-                    <button type="submit" class="btn btn-primary" name="act" value="buscar"  style="padding-right: 1cm;padding-left: 1cm;">
+                    <button type="submit" class="btn btn-primary" name="act" value="buscar"  style="padding-right: 1cm;padding-left: 1cm;transform: translateX(5%);">
                       Buscar propietario
                     </button>
                     <br>
-
-                    <button type="submit" class="btn btn-primary" name="act" value="eliminar"  style="padding-right: 1cm;padding-left: 1cm;">
+                    <button type="submit" class="btn btn-primary" name="act" value="eliminar"  style="padding-right: 1cm;padding-left: 1cm;transform: translateX(10%);">
                       Eliminar propietario
                     </button>
                     <br>
-
-                    <button type="submit" class="btn btn-primary" name="act" value="actualizar"  style="padding-right: 1cm;padding-left: 1cm;">
+                    <button type="submit" class="btn btn-primary" name="act" value="actualizar"  style="padding-right: 1cm;padding-left: 1cm;transform: translateX(15%);">
                       Actualizar propietario
                     </button>
                   </div>
