@@ -53,7 +53,6 @@ public class AddOwnerServlet extends HttpServlet {
         {
             ownerServices.deleteOwner(id);
             request.getSession().setAttribute("identification", id);
-            response.sendRedirect("login.do");
             response.sendRedirect("addOwner.do");
         }
         else if(act.equals("actualizar"))

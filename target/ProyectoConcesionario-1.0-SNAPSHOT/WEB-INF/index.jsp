@@ -77,7 +77,7 @@
                     <button type="submit" class="btn btn-primary" name="act" value="agregar"  style="padding-right: 1cm;padding-left: 1cm;">
                       Agregar propietario
                     </button>
-                    
+
                     <button type="submit" class="btn btn-primary" name="act" value="buscar"  style="padding-right: 1cm;padding-left: 1cm;">
                       Buscar propietario
                     </button>
